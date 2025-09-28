@@ -38,12 +38,32 @@ h2 {
     color: #666;
 }
 
-/* --- NOVOS ESTILOS PARA O MENU --- */
+/* --- ESTILOS PARA O MENU --- */
 .menu-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Cria duas colunas */
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px; /* Espaçamento entre os botões */
     margin-top: 30px;
+}
+
+/* Seleciona o PRIMEIRO .menu-button (destaque para o "emprestimo de livro")*/
+.menu-grid > .menu-button:first-child {
+    grid-column: 1 / -1; 
+    
+    border: 2px solid #ddd; /* Borda mais pronunciada */
+    
+}
+
+/* Efeito hover para o botão de destaque: inverte as cores */
+.menu-grid > .menu-button:first-child:hover {
+    background-color: #28a745; /* Fundo fica verde */
+    color: #ffffff;             /* Texto fica branco */
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2); /* Sombra suave verde */
+}
+
+/* Regra para os outros 4 botões (continua a mesma) */
+.menu-grid > .menu-button:not(:first-child) {
+    grid-column: span 2;
 }
 
 .menu-button {
@@ -88,6 +108,19 @@ h2 {
     text-decoration: underline;
 }
 
+.back-link-menu {
+    display: inline-block;
+    margin-bottom: 0;
+    color: #555;
+    text-decoration: none;
+    font-weight: bold;
+    padding-top: 2%;
+}
+
+.back-link-menu:hover {
+    text-decoration: underline;
+}
+
 p {
     text-align: center;
     color: #666;
@@ -125,4 +158,23 @@ button {
 
 button:hover {
     background-color: #218838;
+}
+
+
+/*Login*/
+.form-login input{
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+/*Cadastro de livro*/
+.cadastro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;;
+    gap: 20px; /* Espaçamento entre os botões */
+    margin-top: 30px;
 }

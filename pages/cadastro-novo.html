@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Livro - Libre Turing</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="cadastro-livro.html" class="back-link">← Voltar</a>
+        <section id="cadastro-livro">
+            <h2>Cadastro de Livro</h2>
+            <p>Adicione os dados para a catalogação de um novo título</p>
+            <form class="form-login">
+                <label for="cadastro-nome-livro">Nome do Livro</label>
+                <input type="text" id="cadastro-nome-livro" name="cadastro-nome-livro" placeholder="Digite o nome do livro" required>
+
+                <label for="cadastro-isbn-livro">ISBN do Livro</label>
+                <input type="text" id="cadastro-isbn-livro" name="cadastro-isbn-livro" placeholder="Digite o ISBN do livro">
+
+                <label for="cadastro-autor-livro">Autor do Livro</label>
+                <input type="text" id="cadastro-autor-livro" name="cadastro-autor-livro" placeholder="Digite o nome do autor">
+
+                <label for="cadastro-categoria-livro">Categoria do Livro</label>
+                <input type="text" id="cadastro-categoria-livro" name="cadastro-categoria-livro" placeholder="Digite a categoria do livro">
+
+                <label for="cadastro-ano-livro">Ano do Livro</label>
+                <input type="number" id="cadastro-ano-livro" name="cadastro-ano-livro" placeholder="Digite o ano de publicação do livro" step="1">
+
+                <button type="submit">Cadastrar Novo Título</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
