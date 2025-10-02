@@ -12,7 +12,8 @@
         <section id="cadastro-livro">
             <h2>Cadastro de Livro</h2>
             <p>Adicione os dados para a catalogação de um novo título</p>
-            <form class="form-login">
+
+            <form class="form-login" action="../cadastro-livro/cadastro_livro_novo.php" method="POST">
                 <label for="cadastro-nome-livro">Nome do Livro</label>
                 <input type="text" id="cadastro-nome-livro" name="cadastro-nome-livro" placeholder="Digite o nome do livro" required>
 
@@ -23,7 +24,7 @@
                 <input type="text" id="cadastro-autor-livro" name="cadastro-autor-livro" placeholder="Digite o nome do autor">
 
                 <label for="cadastro-categoria-livro">Categoria do Livro</label>
-                <input type="text" id="cadastro-categoria-livro" name="cadastro-categoria-livro" placeholder="Digite a categoria do livro">
+                <input type="text" id="cadastro-categoria-livro" name="cadastro-categoria-livro" placeholder="Digite a categoria do livro" required>
 
                 <label for="cadastro-ano-livro">Ano do Livro</label>
                 <input type="number" id="cadastro-ano-livro" name="cadastro-ano-livro" placeholder="Digite o ano de publicação do livro" step="1">
