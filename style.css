@@ -178,3 +178,108 @@ button:hover {
     gap: 20px; /* Espaçamento entre os botões */
     margin-top: 30px;
 }
+
+
+/* --- NOVOS ESTILOS PARA OS BOTÕES DO FORMULÁRIO --- */
+
+.container-botoes {
+    display: flex;
+    flex-direction: column; /* MAIS IMPORTANTE: empilha os botões */
+    gap: 0.625rem;       /* Equivalente a 10px */
+    margin-top: 1rem       /* Espaço acima do primeiro botão */
+}
+
+/* Garante que o botão principal ocupe toda a largura */
+.container-botoes button:not(.botao-secundario) {
+    width: 100%;
+}
+
+/* Estilo do botão secundário (aparência de "contorno") */
+.botao-secundario {
+    background-color: transparent;      
+    color: #28a745;                  
+    border: 2px solid #28a745;        
+    width: auto;                /* Largura baseada no conteúdo */
+
+    padding: 0.5em 1.25em;
+    transition: all 0.3s ease;
+}
+
+.botao-secundario:hover {
+    background-color: #28a745;        
+    color: #ffffff;                  
+}
+
+
+/*Estilo tabelas php*/
+
+/* 1. Container da Tabela (para responsividade e estilo) */
+.container-tabela {
+    overflow-x: auto; 
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem; 
+    padding: 0.5rem;  
+}
+
+/* 2. Estilo Geral da Tabela */
+.container-tabela table {
+    width: 100%;              
+    border-collapse: collapse;  
+    text-align: left;           
+    color: #333;
+}
+
+/* 3. Estilo do Cabeçalho (thead) */
+.container-tabela thead {
+    background-color: #28a745;  
+    color: #ffffff;            
+}
+
+/* 4. Estilo das Células (th e td) */
+.container-tabela th,
+.container-tabela td {
+    padding: 0.75rem 1rem; 
+    vertical-align: middle; 
+}
+
+.container-tabela th {
+    font-weight: bold;
+    text-transform: uppercase; 
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+}
+
+/* 5. Estilo das Linhas do Corpo da Tabela (tbody) */
+.container-tabela tbody tr {
+    border-bottom: 1px solid #eeeeee; 
+}
+
+/* Remove a borda da última linha para um acabamento limpo */
+.container-tabela tbody tr:last-of-type {
+    border-bottom: none;
+}
+
+/* 6. Linhas Alternadas (Zebra Striping) para melhor legibilidade */
+.container-tabela tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9; /* Cor de fundo suave para linhas pares */
+}
+
+/* 7. Efeito Hover para feedback visual */
+.container-tabela tbody tr:hover {
+    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+    cursor: pointer;
+}
+
+/* 8. Estilo para links dentro da tabela */
+.container-tabela a {
+    color: #0862b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container-tabela a:hover {
+    text-decoration: underline;
+    color: red;
+}

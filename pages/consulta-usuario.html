@@ -11,12 +11,18 @@
         <a href="menu.html" class="back-link">← Voltar ao Menu</a>
         <section id="consulta-usuario">
             <h2>Consulta de Usuário</h2>
-            <p>Consulte o status e histórico de um aluno pelo seu RA.</p>
-            <form>
+            <p>Consulte os dados de um aluno pelo seu RA.</p>
+            
+            
+            <form method="POST">
                 <label for="consulta-ra-aluno">RA do Aluno:</label>
                 <input type="text" id="consulta-ra-aluno" name="consulta-ra-aluno" placeholder="Digite o RA do aluno">
 
-                <button type="submit">Consultar Usuário</button>
+                <div class="container-botoes">
+                    <button type="submit" formaction="../consulta-aluno/resultado_consulta.php">Consultar Usuário</button>
+                    <button type="submit" formaction="../consulta-aluno/lista_alunos.php" class="botao-secundario">Lista completa de alunos cadastrados</button>
+                </div>
+                
             </form>
         </section>
     </div>

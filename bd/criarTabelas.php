@@ -57,7 +57,8 @@ try
 
     $sql = "
      CREATE TABLE IF NOT EXISTS alunos (
-        ra CHAR(11) PRIMARY KEY,
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        ra CHAR(11) NOT NULL UNIQUE,
         nome_aluno VARCHAR(100) NOT NULL,
         cpf CHAR(11) NOT NULL UNIQUE,
         data_nasc DATE NOT NULL,
