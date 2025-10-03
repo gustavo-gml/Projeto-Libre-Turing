@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Resultado da Consulta</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../images/favicon.ico">
 </head>
 <body>
 <?php 
@@ -46,18 +47,26 @@
                         <td><?= htmlspecialchars($r['categoria']) ?></td>
                         <td><?= htmlspecialchars($r['ano']) ?></td>
                         <td>
-                            <a href="editar_livro.php?id=<?= $r['id'] ?>">Editar</a>
+                            <a class="editar" href="editar_livro.php?id=<?= $r['id'] ?>">Editar</a>
                         </td>
                         <td>
-                            <a href="excluir_livro.php?id=<?= $r['id'] ?>" onclick="return confirm('Tem certeza?');">Excluir</a>
+                            <a class ="excluir" href="excluir_livro.php?id=<?= $r['id'] ?>" onclick="return confirm('Tem certeza que deseja excluir este registro?');">Excluir</a>
                         </td>
                     </tr>
                 <?php } ?>
             </tbody>
         </table>
         </div>
+        <div class = "container-consulta">
+            <a class="link-php" href="../pages/consulta-livro.html">+ Nova Consulta</a>
+            <a class="link-php" href="../pages/menu.html">Voltar Para o Menu</a>
+        </div>
     <?php else: ?>
         <p>Nenhum livro encontrado com este título.</p>
+        <div class = "container-consulta">
+            <a class="link-php" href="../pages/consulta-livro.html">+ Nova Consulta</a>
+            <a class="link-php" href="../pages/menu.html">Voltar Para o Menu</a>
+        </div>
     <?php endif; ?>
 
 </main>

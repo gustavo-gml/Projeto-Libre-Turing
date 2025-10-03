@@ -50,6 +50,7 @@
   <meta charset="UTF-8">
   <title>Atualização de Registros</title>
   <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/png" href="images/favicon.ico">
   
 </head>
 <body>
@@ -58,7 +59,7 @@
     <h1>Editar Registro</h1>
 	
 	<div class = "container">
-		<a href="javascript:history.back();" class="back-link">← Voltar </a>
+		<a href="javascript:history.back();" class="back-link" style="color: #000000ff ">← Cancelar Edição </a>
 	    <form class="form-login" method="POST">
     		<input type="hidden" name="id" value="<?= htmlspecialchars($registro['id']) ?>">
 
@@ -77,7 +78,7 @@
     		<label for="cadastro-ano-livro">Ano do Livro</label>
     		<input type="number" id="cadastro-ano-livro" name="cadastro-ano-livro" placeholder="Digite o ano de publicação do livro" step="1" value="<?= htmlspecialchars($registro['ano']) ?>">
 
-    		<button type="submit">Salvar alterações no registro</button>
+    		<button type="submit">Salvar Alterações no Registro</button>
 		</form>
 	</div>
 

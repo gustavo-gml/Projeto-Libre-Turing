@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Livro - Libre Turing</title>
+    <title>Cadastro de Título - Libre Turing</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../images/favicon.ico">
 </head>
 <body>
+    <?php
+        // Inicia a sessão para poder acessar a variável $_SESSION
+        session_start();
+
+        // Verifica se a mensagem existe na sessão
+        if (isset($_SESSION['message'])) {
+            // Exibe o alert com a mensagem
+            echo "<script>alert('" . addslashes($_SESSION['message']) . "');</script>";
+        
+            // Limpa a mensagem da sessão
+            unset($_SESSION['message']);
+        }
+    ?>
+
     <div class="container">
         <a href="cadastro-livro.html" class="back-link">← Voltar</a>
         <section id="cadastro-livro">

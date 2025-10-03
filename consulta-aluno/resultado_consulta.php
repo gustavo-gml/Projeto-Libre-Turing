@@ -15,6 +15,7 @@
     <meta charset="UTF-8">
     <title>Resultado da Consulta de Alunos</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../images/favicon.ico">
 </head>
 <body>
 <main> <h1>Resultados para o RA: "<?= htmlspecialchars($termo_busca) ?>"</h1>
@@ -48,8 +49,16 @@
                 </tbody>
             </table>
         </div>
+        <div class = "container-consulta">
+            <a class="link-php" href="../pages/consulta-usuario.html">+ Nova Consulta</a>
+            <a class="link-php" href="../pages/menu.html">Voltar Para o Menu</a>
+        </div>
     <?php else: ?>
         <p>Nenhum aluno cadastrado com este RA.</p>
+        <div class = "container-consulta">
+            <a class="link-php" href="../pages/consulta-usuario.html">+ Nova Consulta</a>
+            <a class="link-php" href="../pages/menu.html">Voltar para o Menu</a>
+        </div>
     <?php endif; ?>
 
 </main>

@@ -185,8 +185,8 @@ button:hover {
 .container-botoes {
     display: flex;
     flex-direction: column; /* MAIS IMPORTANTE: empilha os botões */
-    gap: 0.625rem;       /* Equivalente a 10px */
-    margin-top: 1rem       /* Espaço acima do primeiro botão */
+    gap: 0.625rem;       
+    margin-top: 1rem       
 }
 
 /* Garante que o botão principal ocupe toda a largura */
@@ -199,7 +199,7 @@ button:hover {
     background-color: transparent;      
     color: #28a745;                  
     border: 2px solid #28a745;        
-    width: auto;                /* Largura baseada no conteúdo */
+    width: auto;                
 
     padding: 0.5em 1.25em;
     transition: all 0.3s ease;
@@ -273,13 +273,51 @@ button:hover {
 }
 
 /* 8. Estilo para links dentro da tabela */
-.container-tabela a {
-    color: #0862b3;
+
+.container-consulta{
+    display: flex;
+    gap: 0.625rem;       /* Equivalente a 10px */
+    margin-top: 1rem
+
+}
+.link-php{
+    background-color: #28a745;      
+    color: white;                  
+    border: 2px solid #28a745;
+    border-radius: 4px; 
+    cursor: pointer;       
+    width: auto;                
+    padding: 0.3em 1.25em;
+    transition: all 0.3s ease;
     text-decoration: none;
+    font-size: 16px;
     font-weight: bold;
 }
 
-.container-tabela a:hover {
-    text-decoration: underline;
-    color: red;
+.link-php:hover{
+    background-color: #218838;
+    border-color: #000000;
+}   
+    
+
+.editar{
+    color: #28a745;
+    text-decoration: none;
+    font-weight: bold;
 }
+.editar:hover{
+    text-decoration: underline;
+    color: #218838;
+}
+
+.excluir{
+    color: #FF0000;
+    text-decoration: none;
+    font-weight: bold;
+}
+.excluir:hover{
+    text-decoration: underline;
+    color: #FF0000;
+}
+
+

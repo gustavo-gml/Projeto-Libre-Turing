@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Consulta da Tabela Alunos</title>
   <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/png" href="../images/favicon.ico">
   
 </head>
 <body>
@@ -14,7 +15,7 @@
 ?>
 
 <main>
-    <h1>Lista de Registros</h1>
+    <h1>Lista de Usuários</h1>
 	<div class="container-tabela">
             <table>
                 <thead>
@@ -44,6 +45,10 @@
         </tbody>
         </table>
     </div>
+    <div class = "container-consulta">
+            <a class="link-php" href="../pages/consulta-usuario.html">+ Nova Consulta</a>
+            <a class="link-php" href="../pages/menu.html">Voltar Para o Menu</a>
+        </div>
     
 </main>
 
