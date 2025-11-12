@@ -9,7 +9,7 @@
 <body>
 <?php 
 	require_once "..\BD\conexaoBD.php";
-	$stmt = $conexao->query("SELECT * FROM livros");
+	$stmt = $conexao->query("SELECT * FROM livros ORDER BY titulo ASC");
 	$registros = $stmt->fetchAll();
 ?>
 

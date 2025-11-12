@@ -1,11 +1,13 @@
 <?php 
     require_once "..\BD\conexaoBD.php";
 
-    $termo_busca = $_POST['consulta-ra-aluno'] ?? '';
+    $termo_busca = $_POST['consulta-nome-aluno'] ?? '';
 
-    $sql = "SELECT * FROM alunos WHERE ra = ?";
+    $parametro_sql = $termo_busca . "%"; 
+
+    $sql = "SELECT * FROM alunos WHERE nome_aluno LIKE ? ORDER BY nome_aluno ASC";
     $stmt = $conexao->prepare($sql);
-    $stmt->execute([$termo_busca]); 
+    $stmt->execute([$parametro_sql]); 
     
     $registros = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -18,7 +20,7 @@
     <link rel="icon" type="image/png" href="../images/favicon.ico">
 </head>
 <body>
-<main> <h1>Resultados para o RA: "<?= htmlspecialchars($termo_busca) ?>"</h1>
+<main> <h1>Resultados para o nome: "<?= htmlspecialchars($termo_busca) ?>"</h1>
     
     <?php if (count($registros) > 0): ?>
         <div class="container-tabela">
@@ -54,7 +56,7 @@
             <a class="link-php" href="../pages/menu.html">Voltar Para o Menu</a>
         </div>
     <?php else: ?>
-        <p>Nenhum aluno cadastrado com este RA.</p>
+        <p>Nenhum aluno encontrado com esse nome.</p>
         <div class = "container-consulta">
             <a class="link-php" href="../pages/consulta-usuario.html">+ Nova Consulta</a>
             <a class="link-php" href="../pages/menu.html">Voltar para o Menu</a>

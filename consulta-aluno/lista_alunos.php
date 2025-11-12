@@ -10,7 +10,7 @@
 <body>
 <?php 
 	require_once "..\BD\conexaoBD.php";
-	$stmt = $conexao->query("SELECT * FROM alunos");
+	$stmt = $conexao->query("SELECT * FROM alunos ORDER BY nome_aluno ASC");
 	$registros = $stmt->fetchAll();
 ?>
 

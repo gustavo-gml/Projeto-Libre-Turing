@@ -17,7 +17,7 @@
     // O LIKE com '%' busca por qualquer livro que contenha o termo digitado
     $sql = "SELECT * FROM livros WHERE titulo LIKE ?";
     $stmt = $conexao->prepare($sql);
-    $stmt->execute(["%$termo_busca%"]); // O valor é passado aqui
+    $stmt->execute(["$termo_busca%"]); // O valor é passado aqui
     
     $registros = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
