@@ -47,10 +47,10 @@ try
      CREATE TABLE IF NOT EXISTS exemplares (
         id INT AUTO_INCREMENT PRIMARY KEY,
         codigo_de_barras VARCHAR(50) NOT NULL UNIQUE, 
-        id_livro INT NOT NULL,
+        isbn INT NOT NULL,
         status ENUM('Disponível', 'Emprestado', 'Manutenção', 'Perdido') NOT NULL DEFAULT 'Disponível',
         data_aquisicao DATE,
-        FOREIGN KEY (id_livro) REFERENCES livros(id)
+        FOREIGN KEY (isbn) REFERENCES livros(isbn)
     );
 
     ";

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro - Tabela 2</title>
+  
+</head>
+<body>
+
+  <main>
+    <h1>Cadastro da Tabela 2</h1>
+
+    <form action="cadastro_tabela2_BD.php" method="POST">
+      <label for="campo2">Campo 2</label>
+      <input type="text" id="campo2" name="campo2" maxlength="100" required><br><br>
+
+      <label for="campo3">Campo 3:</label>
+      <input type="text" id="campo3" name="campo3" maxlength="150" required><br><br>
+
+      <label for="campo4">Campo 4:</label>
+      <input type="text" id="campo4" name="campo4" maxlength="20"><br><br>
+
+      <fieldset>
+        <legend>Campo 5</legend>
+        <label for="campo5">Campo 5:</label>
+        <select id="campo5" name="campo5">
+          <option value="Opção 1">Opção 1</option>
+          <option value="Opção 2">Opção 2</option>
+          <option value="Opção 3">Opção 3</option>
+          <option value="Opção 4">Opção 4</option>
+        </select>
+      </fieldset><br><br>
+
+      <button type="submit">Cadastrar Registro</button>
+    </form>
+  </main>
+
+</body>
+</html>

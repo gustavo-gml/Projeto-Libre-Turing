@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->execute([
             ':cil' => $cil,
             ':cnl' => $cnl,
-            ':cal' => $cal,
+            ':cal' => $cal, 
             ':ccl' => $ccl,
             ':cyl' => $cyl
         ]);
