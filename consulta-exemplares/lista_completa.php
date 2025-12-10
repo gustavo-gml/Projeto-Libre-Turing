@@ -11,10 +11,15 @@
     
     // O INNER JOIN junta a tabela exemplares (e) com livros (l)
     // Assim podemos pegar o 'titulo' do livro associado
-    $sql = "SELECT e.*, l.titulo AS nome_livro, l.isbn 
-            FROM exemplares e 
-            INNER JOIN livros l ON e.id_livro = l.id 
-            ORDER BY l.titulo ASC";
+    $sql = "SELECT * FROM view_acervo_completo ORDER BY nome_livro ASC";
+    
+    
+    /*
+    antes da view: 
+    "SELECT e.*, l.titulo AS nome_livro, l.isbn 
+    FROM exemplares e 
+    INNER JOIN livros l ON e.id_livro = l.id 
+    ORDER BY l.titulo ASC";*/
             
     $stmt = $conexao->query($sql);
     $registros = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -44,8 +49,8 @@
                     <td><?= date('d/m/Y', strtotime($r['data_aquisicao'])) ?></td>
                     
                     <td>
-                        <a class="editar" href="editar_exemplar.php?id=<?= $r['id'] ?>">Editar</a>
-                        <a class="excluir" href="excluir_exemplar.php?id=<?= $r['id'] ?>" onclick="return confirm('Tem certeza que deseja remover este exemplar?');">Excluir</a>
+                        <a class="editar" href="editar_exemplar.php?id=<?= $r['id_exemplar'] ?>">Editar</a>
+                        <a class="excluir" href="excluir_exemplar.php?id=<?= $r['id_exemplar'] ?>" onclick="return confirm('Tem certeza que deseja remover este exemplar?');">Excluir</a>
                     </td>
                 </tr>
             <?php } ?>
