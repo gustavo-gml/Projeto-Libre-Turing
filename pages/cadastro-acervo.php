@@ -18,7 +18,7 @@
         <section id="cadastro-livro">
             <h2>Cadastro de Livro</h2>
             <p>Adicione um novo livro ao acervo da biblioteca.</p>
-            <form class="form-login">
+            <form class="form-login" action="cadastro-acervo-bd.php" method="POST">
            
             <label for="cadastro-isbn-livro">Nome do Livro:</label>
             <select name="cadastro-isbn-livro" required>
